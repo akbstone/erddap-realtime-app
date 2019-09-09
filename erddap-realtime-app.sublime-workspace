@@ -1,0 +1,1250 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"meta",
+				"metadata_extend"
+			],
+			[
+				"time_fi",
+				"time_filter_checkbox"
+			],
+			[
+				"device_group",
+				"device_group_label"
+			],
+			[
+				"parae",
+				"parameterGroupId"
+			],
+			[
+				"magn",
+				"magnitude_stats"
+			],
+			[
+				"mag",
+				"magnitude"
+			],
+			[
+				"selectedTime",
+				"selectedTimeUtc"
+			],
+			[
+				"defau",
+				"default_value"
+			],
+			[
+				"Deploy",
+				"DeploymentLoader"
+			],
+			[
+				"default_v",
+				"default_viz_style"
+			],
+			[
+				"aut",
+				"three-d-autorotate"
+			],
+			[
+				"partic",
+				"particleSystem"
+			],
+			[
+				"auto",
+				"AutoRotateTool"
+			],
+			[
+				"three_d",
+				"three_d_controls_tpl"
+			],
+			[
+				"y_",
+				"y_axis"
+			],
+			[
+				"unit_",
+				"unit_label_extra"
+			],
+			[
+				"unit_id",
+				"unit_id_extra"
+			],
+			[
+				"intervalCode",
+				"intervalCodeHeightlabels"
+			],
+			[
+				"interva",
+				"interval_code"
+			],
+			[
+				"cure",
+				"current_date_domain"
+			],
+			[
+				"bin",
+				"binsize"
+			],
+			[
+				"offset",
+				"offsetx"
+			],
+			[
+				"offs",
+				"offsetx"
+			],
+			[
+				"modelLa",
+				"modelLayerGroup"
+			],
+			[
+				"getMode",
+				"getRasterLayerModule"
+			],
+			[
+				"geome",
+				"geometryProperty"
+			],
+			[
+				"schema",
+				"schematic_download"
+			],
+			[
+				"templat",
+				"templateHelpers"
+			],
+			[
+				"platformsv2",
+				"platformsv2_geoserver_domain"
+			],
+			[
+				"default_page",
+				"default_page_tpl"
+			],
+			[
+				"Defau",
+				"DefaultDashboardLayout"
+			],
+			[
+				"proto",
+				"prototype"
+			],
+			[
+				"prot",
+				"prototype"
+			],
+			[
+				"hourLabel",
+				"hourLabelFormat2"
+			],
+			[
+				"dash",
+				"dashboard_options"
+			],
+			[
+				"metadata",
+				"metadata_loader"
+			],
+			[
+				"selected_source",
+				"selected_source_id"
+			],
+			[
+				"selected_attri",
+				"selected_attribute_id"
+			],
+			[
+				"selected_per",
+				"selected_period_id"
+			],
+			[
+				"secondsFor",
+				"secondsFormat"
+			],
+			[
+				"second",
+				"second"
+			],
+			[
+				"secondsFormat",
+				"secondsFormatParse"
+			],
+			[
+				"sub",
+				"sub_hour_time_binners"
+			],
+			[
+				"minuteFormat",
+				"minuteFormatNormalLabel"
+			],
+			[
+				"parameter",
+				"parameter_group_id"
+			],
+			[
+				"selected",
+				"selected_variable"
+			],
+			[
+				"parse_cty",
+				"parse_cytobot_data_into_row"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "src/index.js",
+			"settings":
+			{
+				"buffer_size": 1144,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/notfound.js",
+			"settings":
+			{
+				"buffer_size": 91,
+				"line_ending": "Windows",
+				"name": "notfound.js"
+			}
+		},
+		{
+			"file": "public/index.html",
+			"settings":
+			{
+				"buffer_size": 1717,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "src/users.js",
+			"settings":
+			{
+				"buffer_size": 129,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "users.js"
+			}
+		},
+		{
+			"file": "src/contact.js",
+			"settings":
+			{
+				"buffer_size": 135,
+				"line_ending": "Windows",
+				"name": "contact.js"
+			}
+		},
+		{
+			"file": "src/app.js",
+			"settings":
+			{
+				"buffer_size": 165,
+				"encoding": "UTF-8",
+				"line_ending": "Windows",
+				"name": "app.js"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: Ins",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 157.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/projects/www/erddap-realtime-app",
+		"/C/projects/www/erddap-realtime-app/public",
+		"/C/projects/www/erddap-realtime-app/src"
+	],
+	"file_history":
+	[
+		"/C/projects/www/erddap-realtime-app/src/App.js",
+		"/C/projects/www/erddap-realtime-app/erddap-realtime-app.sublime-project",
+		"/C/projects/www/erddap-realtime-app/package.json",
+		"/C/projects/www/erddap-realtime-app/build/static/js/runtime~main.cf8efc6a.js",
+		"/C/projects/www/axiom-ui-tests/axiom-all.js",
+		"/C/projects/www/axiom-ui-tests/axiom-tests-all.js",
+		"/C/projects/www/axiom-ui-tests/axiom-tests.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/oot_scuttle_realtime/oot_scuttle_realtime.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/oot_scuttle_realtime/scuttle_view.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/oot_scuttle_realtime/oot_scuttle_realtime_layer_defaults.js",
+		"/C/projects/www/oikos-interface/src/app/components/legend/legend.js",
+		"/C/projects/www/oikos-interface/src/app/apps/_default/data/parsers.js",
+		"/C/projects/www/oikos-interface/src/app/views/pages/oot/manifest/manifest.js",
+		"/C/projects/www/oikos-interface/src/app/apps/_default/data/services.js",
+		"/C/projects/www/oikos-interface/src/app/layers/_default/_default.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/oot_scuttle_realtime/oot_properties.js",
+		"/C/projects/www/oikos-interface/src/app/components/map/implementations/leaflet/leaflet_layers.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/worker-data.js",
+		"/C/projects/www/oikos-interface/src/app/workers/plots/parsers.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/oot_scuttle_realtime/oot_variable_defaults.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/oot_scuttle_realtime/oot_trajectory_defaults.js",
+		"/C/projects/www/oikos-interface/src/app/views/pages/oot/dataset/dataset.js",
+		"/C/projects/www/oikos-interface/v2_notes.md",
+		"/C/projects/www/oikos-interface/src/app/layers/data/sensors/charts/sensor_timeseries_metadata.js",
+		"/C/projects/www/oikos-interface/src/app/apps/_default/data/sensor_metadata_parsers.js",
+		"/C/projects/www/oikos-interface/src/lib/d3-plugins/time-series-stats/time-series-stats.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/sensors/charts/time_series_data_loader.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/geojson/charts/default_chart.js",
+		"/C/projects/www/oikos-interface/src/app/workers/plots/query.js",
+		"/C/projects/www/oikos-interface/src/app/apps/_default/data/service_endpoints.js",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/chart.new.js",
+		"/C/projects/www/oikos-interface/src/app/components/data_display/templates/default_header.tpl",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/station-metadata.css",
+		"/C/projects/www/oikos-interface/src/app/components/controls/control_bar.css",
+		"/C/projects/www/oikos-interface/src/assets/styles/app.css",
+		"/C/projects/www/oikos-interface/src/app/layers/data/geojson/time_series_data_loader.js",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/tools/templates/axisgrouping_selector.tpl",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/chart_tools.js",
+		"/C/projects/www/oikos-interface/src/app/components/data_display/data_display.js",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/tools/templates/active_library_toggle.tpl",
+		"/C/projects/www/oikos-interface/src/app/components/data_display/default_header_view.js",
+		"/C/projects/www/oikos-interface/src/app/views/data/data_dashboard.css",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/tools/library.js",
+		"/C/projects/www/oikos-interface/src/app/views/data/data_dashboard.js",
+		"/C/projects/www/oikos-interface/src/app/models/data_compare.js",
+		"/C/projects/www/oikos-interface/src/app/apps/portal/main.js",
+		"/C/projects/www/oikos-interface/src/app/app_functions.js",
+		"/C/projects/www/oikos-interface/src/app/models/map.js",
+		"/C/projects/www/oikos-interface/src/app/components/data_display/sensor_header_view.js",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/style.css",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/heading.js",
+		"/C/projects/www/oikos-interface/src/lib/marionette/backbone.marionette.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/sensors/station_heading.tpl",
+		"/C/projects/www/oikos-interface/src/app/layers/data/sensors/real-time-plots.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/sensors/hover.tpl",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/templates/hover.tpl",
+		"/C/projects/www/oikos-interface/src/app/models/time.js",
+		"/C/projects/www/oikos-interface/src/app/views/map/map.js",
+		"/C/projects/www/oikos-interface/src/app/components/map/map.js",
+		"/C/projects/www/oikos-interface/src/app/models/layer.js",
+		"/C/projects/www/oikos-interface/src/app/components/controls/time_control/time_control.js",
+		"/C/projects/www/oikos-interface/src/app/models/layer_group.js",
+		"/C/projects/www/oikos-interface/src/app/apps/_default/data/sensor_timeseries_parsers.js",
+		"/C/projects/www/oikos-interface/src/app/components/data_display/sensor_data_display.js",
+		"/C/projects/www/oikos-interface/src/lib/icomoon/style.css",
+		"/C/projects/www/oikos-interface/src/app/controllers/metadata_controller.js",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/sensor_parameter_group_v2.js",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/mappable_stations_v2.js",
+		"/C/projects/www/oikos-interface/src/app/controllers/metadata_router.js",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/sensor_inventory.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/geojson/create_chart_metadata.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/geojson/geojson.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/geojson/time_series_collection.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/sensors/next_gen_time_series_collection.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/geojson/time_series_chart_draw.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/geojson/charts/time_series.js",
+		"/C/projects/www/oikos-interface/src/app/components/data_display/default_timeseries_content_view.js",
+		"/C/projects/www/oikos-interface/src/app/components/data_display/chart_loader.js",
+		"/C/projects/www/oikos-interface/src/app/apps/portal/models/layer_mappings.js",
+		"/C/projects/www/oikos-interface/src/app/components/data_display/time_series_sprite.js",
+		"/C/projects/www/oikos-interface/src/app/apps/_default/data/sensor_heatmap_parsers.js",
+		"/C/projects/www/oikos-interface/src/app/controllers/map_controller.js",
+		"/C/projects/www/oikos-interface/src/app/controllers/map_router.js",
+		"/C/projects/www/oikos-interface/src/app/apps/portal/controller.js",
+		"/C/projects/www/oikos-interface/src/app/components/popups/modal.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/oot_scuttle_realtime/oot_trajectory_layer.js",
+		"/C/projects/www/oikos-interface/src/app/views/pages/oot/manifest.js",
+		"/C/projects/www/oikos-interface/src/app/views/map_view/map.js",
+		"/C/projects/www/oikos-interface/src/app/components/controls/control_bar.js",
+		"/C/projects/www/oikos-interface/src/app/components/charts/parameter_time_series.js",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/chart_display_compare.js",
+		"/C/projects/www/oikos-interface/src/app/layers/wms_raster/wms_raster.js",
+		"/C/projects/www/oikos-interface/src/app/apps/_default/helpers/formatters.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/geojson/compose.js",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/species.css",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/templates/species_content.tpl",
+		"/C/projects/www/oikos-interface/src/app/views/search/templates/atn_platform.tpl",
+		"/C/projects/www/oikos-interface/src/app/views/project/embedded_project_map.js",
+		"/C/projects/www/oikos-interface/src/app/views/project/project.js",
+		"/C/projects/www/oikos-interface/src/app/views/search/templates/species.tpl",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/templates/species.tpl",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/species.js",
+		"/C/projects/www/oikos-interface/src/app/views/map/map_control_search.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/cruise_tracklines.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/atn_defaults.js",
+		"/C/projects/www/oikos-interface/src/app/views/search/results.js",
+		"/C/projects/www/oikos-interface/src/app/models/search.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/platforms/cruises.js",
+		"/C/projects/www/oikos-interface/src/app/views/platforms/platform_view.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/atn_group_preparse_default.js",
+		"/C/projects/www/oikos-interface/src/app/layers/data/moving_platform_aggregate_defaults.js",
+		"/C/projects/www/oikos-interface/src/app/workers/platform.js",
+		"/C/projects/www/oikos-interface/src/app/views/platforms/templates/three_d_controls.tpl",
+		"/C/projects/www/oikos-interface/src/app/views/platforms/three_d.js",
+		"/C/projects/www/oikos-interface/src/app/views/platforms/viz_root.js",
+		"/C/projects/www/oikos-interface/src/app/views/platforms/two_d.js",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/tools/templates/autoscale_selector.tpl",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/tools/templates/tools_left.tpl",
+		"/C/projects/www/oikos-interface/src/app/components/worker_charts/tools/autoscale_selector.js",
+		"/C/projects/www/oikos-interface/src/app/behaviors/behaviors.js",
+		"/C/projects/www/oikos-interface/src/app/views/platforms/platform.css",
+		"/C/projects/www/oikos-interface/src/app/controllers/data_router.js",
+		"/C/projects/www/oikos-interface/src/app/controllers/platform_router.js",
+		"/C/projects/www/oikos-interface/src/app/views/platforms/loader.js",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/station_sensor_v2.js",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/sensor_v2.js",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/station_sensor.js",
+		"/C/projects/www/oikos-interface/src/app/views/metadata/station.js"
+	],
+	"find":
+	{
+		"height": 40.0
+	},
+	"find_in_files":
+	{
+		"height": 118.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"NotFound",
+			"main."
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "src/index.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1144,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								824,
+								824
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage",
+							"word_wrap": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "src/notfound.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 91,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								91,
+								91
+							]
+						],
+						"settings":
+						{
+							"auto_name": "notfound.js",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "public/index.html",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1717,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1105,
+								1105
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/users.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 129,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								129,
+								129
+							]
+						],
+						"settings":
+						{
+							"auto_name": "users.js",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "src/contact.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								135,
+								135
+							]
+						],
+						"settings":
+						{
+							"auto_name": "contact.js",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "src/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 165,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								165,
+								165
+							]
+						],
+						"settings":
+						{
+							"auto_name": "app.js",
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/Babel/JavaScript (Babel).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 22.0
+	},
+	"input":
+	{
+		"height": 42.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "erddap-realtime-app.sublime-project",
+	"replace":
+	{
+		"height": 40.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"app.",
+				"src\\App.js"
+			],
+			[
+				"services",
+				"src\\app\\apps\\_default\\data\\services.js"
+			],
+			[
+				"scuttle_view",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\scuttle_view.js"
+			],
+			[
+				"scuttle_def",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_scuttle_realtime_layer_defaults.js"
+			],
+			[
+				"_default",
+				"src\\app\\layers\\_default\\_default.js"
+			],
+			[
+				"leaflet_la",
+				"src\\app\\components\\map\\implementations\\leaflet\\leaflet_layers.js"
+			],
+			[
+				"worker-data",
+				"src\\app\\layers\\data\\worker-data.js"
+			],
+			[
+				"oot_properties",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_properties.js"
+			],
+			[
+				"manifest",
+				"src\\app\\views\\pages\\oot\\manifest\\manifest.js"
+			],
+			[
+				"parsers",
+				"src\\app\\apps\\_default\\data\\parsers.js"
+			],
+			[
+				"scuttle_",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_scuttle_realtime_layer_defaults.js"
+			],
+			[
+				"scuttle.js",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_scuttle_realtime.js"
+			],
+			[
+				"dataset.js",
+				"src\\app\\views\\pages\\oot\\dataset\\dataset.js"
+			],
+			[
+				"oot_var",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_variable_defaults.js"
+			],
+			[
+				"oot_traj",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_trajectory_defaults.js"
+			],
+			[
+				"scuttle_d",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_scuttle_realtime_layer_defaults.js"
+			],
+			[
+				"sensors/time_ser",
+				"src\\app\\layers\\data\\sensors\\charts\\time_series_data_loader.js"
+			],
+			[
+				"sensors/metadata",
+				"src\\app\\layers\\data\\sensors\\charts\\sensor_timeseries_metadata.js"
+			],
+			[
+				"time-series",
+				"src\\lib\\d3-plugins\\time-series-stats\\time-series-stats.js"
+			],
+			[
+				"time-series-sta",
+				"src\\lib\\d3-plugins\\time-series-stats\\time-series-stats.js"
+			],
+			[
+				"time_series_dat",
+				"src\\app\\layers\\data\\sensors\\charts\\time_series_data_loader.js"
+			],
+			[
+				"query",
+				"src\\app\\workers\\plots\\query.js"
+			],
+			[
+				"default_chart",
+				"src\\app\\layers\\data\\geojson\\charts\\default_chart.js"
+			],
+			[
+				"geojson/time_series_data",
+				"src\\app\\layers\\data\\geojson\\time_series_data_loader.js"
+			],
+			[
+				"app.css",
+				"src\\assets\\styles\\app.css"
+			],
+			[
+				"control_bar",
+				"src\\app\\components\\controls\\control_bar.css"
+			],
+			[
+				"station-metadat",
+				"src\\app\\views\\metadata\\station-metadata.css"
+			],
+			[
+				"service_end",
+				"src\\app\\apps\\_default\\data\\service_endpoints.js"
+			],
+			[
+				"chart.new",
+				"src\\app\\components\\worker_charts\\chart.new.js"
+			],
+			[
+				"sensor_metada",
+				"src\\app\\apps\\_default\\data\\sensor_metadata_parsers.js"
+			],
+			[
+				"data_das",
+				"src\\app\\views\\data\\data_dashboard.css"
+			],
+			[
+				"data_disp",
+				"src\\app\\components\\data_display\\data_display.js"
+			],
+			[
+				"active_togg",
+				"src\\app\\components\\worker_charts\\tools\\templates\\active_library_toggle.tpl"
+			],
+			[
+				"default_head",
+				"src\\app\\components\\data_display\\default_header_view.js"
+			],
+			[
+				"data_compare",
+				"src\\app\\models\\data_compare.js"
+			],
+			[
+				"app_func",
+				"src\\app\\app_functions.js"
+			],
+			[
+				"main.js",
+				"src\\app\\apps\\portal\\main.js"
+			],
+			[
+				"app_fun",
+				"src\\app\\app_functions.js"
+			],
+			[
+				"toggle.tpl",
+				"src\\app\\components\\worker_charts\\tools\\templates\\active_library_toggle.tpl"
+			],
+			[
+				"library",
+				"src\\app\\components\\worker_charts\\tools\\library.js"
+			],
+			[
+				"default_header",
+				"src\\app\\components\\data_display\\templates\\default_header.tpl"
+			],
+			[
+				"data_dashbo",
+				"src\\app\\views\\data\\data_dashboard.js"
+			],
+			[
+				"worker/style",
+				"src\\app\\components\\worker_charts\\style.css"
+			],
+			[
+				"sensor_head",
+				"src\\app\\components\\data_display\\sensor_header_view.js"
+			],
+			[
+				"marionett",
+				"src\\lib\\marionette\\backbone.marionette.js"
+			],
+			[
+				"data_dashboar",
+				"src\\app\\views\\data\\data_dashboard.js"
+			],
+			[
+				"compare.js",
+				"src\\app\\models\\data_compare.js"
+			],
+			[
+				"real-time",
+				"src\\app\\layers\\data\\sensors\\real-time-plots.js"
+			],
+			[
+				"sensors/loader",
+				"src\\app\\layers\\data\\sensors\\charts\\time_series_data_loader.js"
+			],
+			[
+				"station_heading",
+				"src\\app\\layers\\data\\sensors\\station_heading.tpl"
+			],
+			[
+				"sensors/hover.t",
+				"src\\app\\layers\\data\\sensors\\hover.tpl"
+			],
+			[
+				"hover.tpl",
+				"src\\app\\components\\worker_charts\\templates\\hover.tpl"
+			],
+			[
+				"sensor/loader",
+				"src\\app\\layers\\data\\sensors\\charts\\time_series_data_loader.js"
+			],
+			[
+				"metadata",
+				"src\\app\\apps\\_default\\data\\sensor_metadata_parsers.js"
+			],
+			[
+				"metadata_parse",
+				"src\\app\\apps\\_default\\data\\sensor_metadata_parsers.js"
+			],
+			[
+				"default_header.tpl",
+				"src\\app\\components\\data_display\\templates\\default_header.tpl"
+			],
+			[
+				"_def",
+				"src\\app\\layers\\_default\\_default.js"
+			],
+			[
+				"time.js",
+				"src\\app\\models\\time.js"
+			],
+			[
+				"leaflet_layers",
+				"src\\app\\components\\map\\implementations\\leaflet\\leaflet_layers.js"
+			],
+			[
+				"_defa",
+				"src\\app\\layers\\_default\\_default.js"
+			],
+			[
+				"layer_group",
+				"src\\app\\models\\layer_group.js"
+			],
+			[
+				"time_contro",
+				"src\\app\\components\\controls\\time_control\\time_control.js"
+			],
+			[
+				"time.",
+				"src\\app\\models\\time.js"
+			],
+			[
+				"layer.js",
+				"src\\app\\models\\layer.js"
+			],
+			[
+				"components/map",
+				"src\\app\\components\\map\\map.js"
+			],
+			[
+				"views/map",
+				"src\\app\\views\\map\\map.js"
+			],
+			[
+				"map.js",
+				"src\\app\\models\\map.js"
+			],
+			[
+				"worker-da",
+				"src\\app\\layers\\data\\worker-data.js"
+			],
+			[
+				"real-time-plots",
+				"src\\app\\layers\\data\\sensors\\real-time-plots.js"
+			],
+			[
+				"worker_charts/style",
+				"src\\app\\components\\worker_charts\\style.css"
+			],
+			[
+				"parsers.js",
+				"src\\app\\workers\\plots\\parsers.js"
+			],
+			[
+				"sensor_time",
+				"src\\app\\apps\\_default\\data\\sensor_timeseries_parsers.js"
+			],
+			[
+				"style.css",
+				"src\\lib\\icomoon\\style.css"
+			],
+			[
+				"sensor/metadata",
+				"src\\app\\layers\\data\\sensors\\charts\\sensor_timeseries_metadata.js"
+			],
+			[
+				"app_",
+				"src\\app\\app_functions.js"
+			],
+			[
+				"mappable_",
+				"src\\app\\views\\metadata\\mappable_stations_v2.js"
+			],
+			[
+				"sensor_parameter_group_v2",
+				"src\\app\\views\\metadata\\sensor_parameter_group_v2.js"
+			],
+			[
+				"metadata_router",
+				"src\\app\\controllers\\metadata_router.js"
+			],
+			[
+				"metadata_controll",
+				"src\\app\\controllers\\metadata_controller.js"
+			],
+			[
+				"invent",
+				"src\\app\\views\\metadata\\sensor_inventory.js"
+			],
+			[
+				"time-series-stats",
+				"src\\lib\\d3-plugins\\time-series-stats\\time-series-stats.js"
+			],
+			[
+				"real-time-",
+				"src\\app\\layers\\data\\sensors\\real-time-plots.js"
+			],
+			[
+				"sensors/time_series_",
+				"src\\app\\layers\\data\\sensors\\next_gen_time_series_collection.js"
+			],
+			[
+				"geojson/time_series_co",
+				"src\\app\\layers\\data\\geojson\\time_series_collection.js"
+			],
+			[
+				"geojson.js",
+				"src\\app\\layers\\data\\geojson\\geojson.js"
+			],
+			[
+				"sensors/sensor_met",
+				"src\\app\\layers\\data\\sensors\\charts\\sensor_timeseries_metadata.js"
+			],
+			[
+				"geojson/create_",
+				"src\\app\\layers\\data\\geojson\\create_chart_metadata.js"
+			],
+			[
+				"chart_loader",
+				"src\\app\\components\\data_display\\chart_loader.js"
+			],
+			[
+				"default_time",
+				"src\\app\\components\\data_display\\default_timeseries_content_view.js"
+			],
+			[
+				"time_series_chart_d",
+				"src\\app\\layers\\data\\geojson\\time_series_chart_draw.js"
+			],
+			[
+				"time_series.js",
+				"src\\app\\layers\\data\\geojson\\charts\\time_series.js"
+			],
+			[
+				"real-time-pl",
+				"src\\app\\layers\\data\\sensors\\real-time-plots.js"
+			],
+			[
+				"sensor_met",
+				"src\\app\\apps\\_default\\data\\sensor_metadata_parsers.js"
+			],
+			[
+				"sensor_timeser",
+				"src\\app\\apps\\_default\\data\\sensor_timeseries_parsers.js"
+			],
+			[
+				"sensor_meta",
+				"src\\app\\apps\\_default\\data\\sensor_metadata_parsers.js"
+			],
+			[
+				"sensor_heat",
+				"src\\app\\apps\\_default\\data\\sensor_heatmap_parsers.js"
+			],
+			[
+				"geojson/time_series.js",
+				"src\\app\\layers\\data\\geojson\\charts\\time_series.js"
+			],
+			[
+				"time_series_sp",
+				"src\\app\\components\\data_display\\time_series_sprite.js"
+			],
+			[
+				"sensor_parse",
+				"src\\app\\apps\\_default\\data\\sensor_timeseries_parsers.js"
+			],
+			[
+				"layer_map",
+				"src\\app\\apps\\portal\\models\\layer_mappings.js"
+			],
+			[
+				"portal/controll",
+				"src\\app\\apps\\portal\\controller.js"
+			],
+			[
+				"map_contr",
+				"src\\app\\controllers\\map_controller.js"
+			],
+			[
+				"map_router",
+				"src\\app\\controllers\\map_router.js"
+			],
+			[
+				"modal.",
+				"src\\app\\components\\popups\\modal.js"
+			],
+			[
+				"scutle_view",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\scuttle_view.js"
+			],
+			[
+				"trajectory_de",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_trajectory_defaults.js"
+			],
+			[
+				"layer_grop",
+				"src\\app\\models\\layer_group.js"
+			],
+			[
+				"time_control",
+				"src\\app\\components\\controls\\time_control\\time_control.js"
+			],
+			[
+				"oot_traject",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_trajectory_layer.js"
+			],
+			[
+				"oot_trajec",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_trajectory_layer.js"
+			],
+			[
+				"time.j",
+				"src\\app\\models\\time.js"
+			],
+			[
+				"time_contr",
+				"src\\app\\components\\controls\\time_control\\time_control.js"
+			],
+			[
+				"views/map.js",
+				"src\\app\\views\\map\\map.js"
+			],
+			[
+				"view/map",
+				"src\\app\\views\\map_view\\map.js"
+			],
+			[
+				"map/",
+				"src\\app\\components\\map\\map.js"
+			],
+			[
+				"models/time",
+				"src\\app\\models\\time.js"
+			],
+			[
+				"oot_value",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_variable_defaults.js"
+			],
+			[
+				"oot_trajectory_layer",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_trajectory_layer.js"
+			],
+			[
+				"oot_vari",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_variable_defaults.js"
+			],
+			[
+				"models/layer",
+				"src\\app\\models\\layer.js"
+			],
+			[
+				"models/map",
+				"src\\app\\models\\map.js"
+			],
+			[
+				"models/time.",
+				"src\\app\\models\\time.js"
+			],
+			[
+				"trajectory",
+				"src\\app\\layers\\data\\platforms\\oot_scuttle_realtime\\oot_trajectory_defaults.js"
+			],
+			[
+				"chart_display_compare",
+				"src\\app\\components\\worker_charts\\chart_display_compare.js"
+			],
+			[
+				"data_dasb",
+				"src\\app\\views\\data\\data_dashboard.js"
+			],
+			[
+				"parameter_",
+				"src\\app\\components\\charts\\parameter_time_series.js"
+			],
+			[
+				"wms_raster",
+				"src\\app\\layers\\wms_raster\\wms_raster.js"
+			],
+			[
+				"layer_mapp",
+				"src\\app\\apps\\portal\\models\\layer_mappings.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 394.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
