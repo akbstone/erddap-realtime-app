@@ -25,10 +25,11 @@ export default function Search() {
   const classes = useStyles()
 
   return (
+    <React.Fragment>
+    <h1>Search</h1>
   	<form className={classes.container} noValidate autoComplete="off">
     	<TextField
 	        id="standard-full-width"
-	        label="Search"
 	        style={{ margin: 8 }}
 	        placeholder="Enter station name"
 	        helperText=""
@@ -40,5 +41,6 @@ export default function Search() {
 	      />
 
     </form>
+    </React.Fragment>
   )
 }

@@ -1,3 +1,29 @@
+ERDDAP Real Time Web app
+========================
+
+A mobile web app that allows users to explore real time sensor data available on an ERDDAP install.  This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+
+
+Getting started
+---------------
+
+Requirements
+
+- NPM > 10
+
+Install it
+
+### `git clone ....`
+### `npm install`
+
+Run it
+
+### `npm start`
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
