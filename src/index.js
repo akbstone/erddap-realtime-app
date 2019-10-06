@@ -7,8 +7,8 @@ import Favorites from './components/favorites'
 import Nearby from './components/nearby'
 import Notfound from './components/notfound'
 import Station from './components/station_display/station'
-import SearchAppBar from './components/search_app_bar'
-import Search from './components/search'
+import AppBar from './components/app_bar'
+import Search from './components/search_display/search'
 import History from './components/history'
 import BottomNav from './components/bottom_nav'
 import { Container } from '@material-ui/core'
@@ -19,7 +19,7 @@ import theme from './theme'
 const routing = (
   <Router>
     <ThemeProvider theme={theme}>
-  	<SearchAppBar />
+  	<AppBar />
     <Container>
       <Switch>
         <Route exact path="/" component={App} />

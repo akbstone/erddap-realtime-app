@@ -1,6 +1,7 @@
 import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { TextField } from '@material-ui/core'
+import Results from './results';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -26,7 +27,6 @@ export default function Search() {
 
   return (
     <React.Fragment>
-    <h1>Search</h1>
   	<form className={classes.container} noValidate autoComplete="off">
     	<TextField
 	        id="standard-full-width"
@@ -41,6 +41,7 @@ export default function Search() {
 	      />
 
     </form>
+    <Results />
     </React.Fragment>
   )
 }
