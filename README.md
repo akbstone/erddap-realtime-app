@@ -15,7 +15,7 @@ Search
 - Dropdown menu that lists all avaiable variables for filtering on
     - Variable list to come from ERDDAP API
 
-[SCREENSHOT]
+<img src="images/preview.jpg" style="max-width:100%" />
 
 
 Station page
