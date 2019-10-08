@@ -5,6 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.5.0",
     "@material-ui/icons": "^4.4.3",
+    "erddap-parser": "file:../erddap-parser-js",
     "erddap-timeseries-chart": "git://github.com/akbstone/erddap-timeseries-chart-js.git",
     "react": "^16.10.2",
     "react-dom": "^16.10.2",

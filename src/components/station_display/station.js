@@ -1,8 +1,17 @@
 import React from 'react'
 import Sensor from './sensor';
+import {erddapParser} from 'erddap-parser';
 
 class Station extends React.Component {
-  
+  async componentDidMount(){
+      this.setState({station:null})
+      let stationMetadata = await erddapParser.getDatasetMetadata({
+        server:'https://erddap.sensors.axds.co/erddap',
+        dataset_id:this.props.match.params.id
+      })
+      this.setState({station:stationMetadata})
+
+  }
   render() {
     let sensors = [
         {
