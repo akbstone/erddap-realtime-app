@@ -45,6 +45,7 @@ Getting started
 Requirements
 
 - NPM > 10
+- Chrome (https://github.com/facebook/create-react-app/issues/7337)
 
 Install it
 
