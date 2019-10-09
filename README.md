@@ -78,5 +78,5 @@ Build the image (recommend using a versioned tag rather than 'latest')
 `docker build -f Dockerfile.production -t erddap-realtime-app:latest .`
 
 Run it on port 3000 on your server
-`docker run -p 3000:80 erddap-realtime-app:prod`
+`docker run -p 3000:80 erddap-realtime-app`
 
