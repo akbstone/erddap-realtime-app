@@ -58,10 +58,25 @@ Run it
 
 
 Build
-
+### `npm run build`
 
 
 Test
 
 
+Docker
+------
+
+### Development
+If you have Docker installed and running, you can launch the app with docker-compose up -d and then access localhost:3000 to view.
+
+When you're done, run docker-compose down.
+
+
+### Production
+Build the image (recommend using a versioned tag rather than 'latest')
+`docker build -f Dockerfile.production -t erddap-realtime-app:latest .`
+
+Run it on port 3000 on your server
+`docker run -p 3000:80 erddap-realtime-app`
 

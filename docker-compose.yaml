@@ -1,0 +1,12 @@
+version: "2.4"
+
+services:
+  client:
+    build: .
+    image: erddap-realtime-react
+    command: "npm start"
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules/
