@@ -84,7 +84,7 @@ function Station(props) {
         });
 
         output = (
-            <div className="station-wrap">
+            <div className="station-wrap" style={{marginBottom: "64px"}}>
                 <FavoriteButton favorite={isFavorite} handleClick={onFavoriteClick} />
                 <h1>Station name ({stationId})</h1>
                     {parameters.map(parameter => <Sensor key={parameter.index} parameter={parameter} height={100} />)}

@@ -8,7 +8,6 @@ class FavoriteStorage {
     static setItem(key, value) {
 
         localStorage.setItem(`${MEMORY_KEY_PREFIX}${key}`, value);
-        // localStorage.setItem(MEMORY_KEY_PREFIX,JSON.stringify({[key]: value}));
         return value;
     }
 
@@ -16,9 +15,7 @@ class FavoriteStorage {
      * This is used to get a specific key from storage
      */
     static getItem(key) {
-
         return localStorage.getItem(`${MEMORY_KEY_PREFIX}${key}`);
-        // return localStorage.getItem([MEMORY_KEY_PREFIX]) ? JSON.parse(localStorage.getItem([MEMORY_KEY_PREFIX]))[key] : undefined;
     }
 
     /**
@@ -26,20 +23,7 @@ class FavoriteStorage {
      */
     static removeItem(key) {
         localStorage.removeItem(`${MEMORY_KEY_PREFIX}${key}`);
-
-        // if (localStorage.getItem([MEMORY_KEY_PREFIX])) {
-        //     let favorites = delete JSON.parse(localStorage.getItem([MEMORY_KEY_PREFIX]))[key];
-        //     localStorage.setItem(MEMORY_KEY_PREFIX,JSON.stringify(favorites));
-        // } 
         return key;
-    }
-
-    /**
-     * This is used to clear the storage
-     */
-    static clear() {
-        // favorites = {};
-        // return favorites;
     }
 }
 
