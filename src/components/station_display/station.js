@@ -38,7 +38,7 @@ class Station extends React.Component {
                 }
             )
         })
-        output = <div className="station-wrap">
+      output = <div className="station-wrap" style={{marginBottom: "64px"}}>
         <h1>Station name ({this.props.match.params.id})</h1>
         {parameters.map(parameter => (
             <Sensor key={parameter.index} parameter={parameter} height={100} />
