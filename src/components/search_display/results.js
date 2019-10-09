@@ -15,36 +15,9 @@ const useStyles = makeStyles({
 
   });
 
-export default function Results() {
+export default function Results(props) {
     let classes = useStyles(),
-        items = [
-        {
-            label:'First result',
-            index:1,
-            id:'first'
-        },
-        {
-            label:'Second',
-            index:2,
-            id:'second'
-        },
-        {
-            label:'Third result',
-            index:3,
-            id:'third'
-        },
-        {
-            label:'Fourth result',
-            index:4,
-            id:'fourth'
-        },
-        {
-            label:'Fifth result',
-            index:5,
-            id:'fifth'
-        }
-
-    ].map(r=>Object.assign(r,{result_url:'/station/' + r.id}))
+        items = props.searchResults.map(r=>Object.assign(r,{result_url:'/station/' + r.id}))
     return (
         <React.Fragment>
             {items.map(result => (

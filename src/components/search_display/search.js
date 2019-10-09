@@ -2,6 +2,7 @@ import React from 'react'
 import { makeStyles } from '@material-ui/core/styles'
 import { TextField } from '@material-ui/core'
 import Results from './results';
+import {erddapParser} from 'erddap-parser';
 
 const useStyles = makeStyles(theme => ({
   container: {
@@ -21,27 +22,41 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
+class Search extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {searchResults:  [],
+                  searchString: ""};
 
-export default function Search() {
-  const classes = useStyles()
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
+  }
 
-  return (
-    <React.Fragment>
-  	<form className={classes.container} noValidate autoComplete="off">
-    	<TextField
-	        id="standard-full-width"
-	        style={{ margin: 8 }}
-	        placeholder="Enter station name"
-	        helperText=""
-	        fullWidth
-	        margin="normal"
-	        InputLabelProps={{
-	          shrink: true,
-	        }}
-	      />
+  handleChange(event) {
+     this.setState({searchString: event.target.value});
+  }
 
-    </form>
-    <Results />
-    </React.Fragment>
-  )
+ handleSubmit(event) {
+    
+    erddapParser.searchTabledap(this.state.searchString)
+       .then(parseResults => parseResults.map(r=>Object.assign(r, {id: r['Dataset ID'], label: r.Title, index: 1}) ))
+       .then(s =>   this.setState({searchResults: s}));
+     event.preventDefault();
+   }
+
+  render() {
+    return (
+      <React.Fragment>
+      <form onSubmit={this.handleSubmit}  >
+        <label >
+          Name:
+          <input type="text"  value={this.state.station} onChange={this.handleChange} />
+        </label>
+        <input type="submit" value="Submit" />
+      </form>
+      <Results var1="abd" searchResults={this.state.searchResults}/>
+      </React.Fragment>
+    );
+  }
 }
+export default Search
