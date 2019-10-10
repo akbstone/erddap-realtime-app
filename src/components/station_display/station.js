@@ -50,7 +50,7 @@ function Station(props) {
         };
 
         fetchData();
-    },[station])
+    },[])
 
 
     React.useEffect(() => {
