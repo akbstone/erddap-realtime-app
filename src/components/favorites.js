@@ -43,7 +43,7 @@ class Favorites extends React.Component {
 
       let station_url = '/station/' + station.id;
       return <React.Fragment key={station.index}> 
-        <div className="card">
+        <div className="card" style={{clear: "both"}}>
           <FavoriteButton handleClick={setFavorite} favorite={station.isFavorite} />
           <Link to={station_url}>{station.id}</Link>
         </div>
