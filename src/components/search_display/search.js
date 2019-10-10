@@ -10,6 +10,7 @@ import Paper from '@material-ui/core/Paper';
 import Chip from '@material-ui/core/Chip';
 import MenuItem from '@material-ui/core/MenuItem';
 import CancelIcon from '@material-ui/icons/Cancel';
+import {erddapParser} from 'erddap-parser';
 
 const FAKE_STATIONS = [
   { label: 'gov_noaa_nws_panc' },
@@ -68,7 +69,15 @@ const useStyles = makeStyles(theme => ({
 }));
 
 async function getStations() {
-  return FAKE_STATIONS;
+  let ob = {
+      constraints: {
+        searchFor:'water'
+      },
+      server:process.env.REACT_APP_ERDDAP_URL || 'https://erddap.sensors.axds.co/erddap'
+    }
+
+    return erddapParser.searchTabledap(ob);
+
 }
 
 function NoOptionsMessage(props) {
@@ -299,11 +308,16 @@ export default function IntegrationReactSelect(props) {
   React.useEffect(() => {
         const fetchStations = async () => {
             let stations = await getStations();
-            setStations(stations);
+            setStations(stations.map(s=>{
+              return {
+                label:s.Title,
+                value:s['Dataset ID']
+              }
+            }));
         };
 
         fetchStations();
-    },[stations])
+    },[])
 
   const handleChangeSingle = value => {
     props.history.push(`/station/${value.value}`);
