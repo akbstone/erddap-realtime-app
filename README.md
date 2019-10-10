@@ -73,6 +73,24 @@ $ npm run build
 $ npm test
 ```
 
+Customizing
+-----------
+
+You can customize several things by setting environment variables.
+
+| Var | Description | Default |
+| --- | ----------- | ------- |
+| `REACT_APP_ERDDAP_URL` | the base URL that should be used for an ERDDAP instance | `https://erddap.sensors.axds.co` |
+| `REACT_APP_LABEL` | the application title | `Real Time ERDDAP App` |
+| `REACT_APP_TIME_VAR` | the variable used for the x dimension (time) in plots | `time` |
+| `REACT_APP_DEPTH_VAR` | the variable used for the z dimension in plots | `z` |
+| `REACT_APP_LOGO` | URL to a logo (unused) | '' |
+
+Defaults are set in [`.env`](.env) and are part of this repository, please leave them be.
+
+To override, create a `.env.local`, or [see the variety of files that can be used](https://create-react-app.dev/docs/adding-custom-environment-variables#what-other-env-files-can-be-used).
+Env vars can also be passed when creating a docker instance with the `-e` flag to `docker run`.
+
 Development
 -----------
 

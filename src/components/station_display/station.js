@@ -27,7 +27,7 @@ function Station(props) {
         const fetchData = async () => {
         
             let stationMetadata = await erddapParser.getDatasetMetadata({
-                server:'https://erddap.sensors.axds.co/erddap',
+                server: process.env.REACT_APP_ERDDAP_URL || 'https://erddap.sensors.axds.co/erddap',
                 dataset_id: stationId
             });
 
