@@ -2,10 +2,21 @@ import React from 'react'
 import {select} from 'd3-selection';
 import {erddapTimeseriesChart} from 'erddap-timeseries-chart';
 import {erddapParser} from 'erddap-parser';
+import SensorHighlight from './sensorHighlight';
+
+
 
 class Sensor extends React.Component {
+   
+   constructor(props){
+       super(props)
+       this.state = {highlight:null};
+
+       this.onMouseMove = this.onMouseMove.bind(this);
+   }
   
   async componentDidMount(){
+    
     try {
         let now = new Date(),
             day = 24*60*60*1000,
@@ -44,7 +55,8 @@ class Sensor extends React.Component {
                     .height(height)
                     .x(d=>d[process.env.REACT_APP_TIME_VAR || 'time'])
                     .y(d=>d.value)
-                    .chartType('line');
+                    .chartType('line')
+                    .on('mousemove',this.onMouseMove);
             
             svg.call(chart);
         }catch(e){
@@ -52,11 +64,17 @@ class Sensor extends React.Component {
         }
   }
 
+  onMouseMove(e) {
+    this.setState({highlight: e});
+  }
+
   render() {
+
         
     return <div>
-        <h4>{this.props.parameter.long_name}</h4>
-        <div className="chartWrap" ref="chartWrap">
+        <h4>{this.props.parameter.long_name} ({this.props.parameter.units})</h4>
+        <SensorHighlight highlight={this.state.highlight} parameter={this.props.parameter} />
+        <div className="chartWrap" ref="chartWrap" style={{marginRight:"200px"}}>
         </div>
       </div>
   }
