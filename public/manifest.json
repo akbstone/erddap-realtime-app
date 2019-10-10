@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "erddap-app",
+  "name": "Lightweight ERDDAP Viewer React PWA",
   "icons": [
     {
       "src": "favicon.ico",
