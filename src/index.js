@@ -14,7 +14,7 @@ import BottomNav from './components/bottom_nav'
 import { Container } from '@material-ui/core'
 import { ThemeProvider } from '@material-ui/styles'
 import theme from './theme'
-
+import * as serviceWorker from './serviceWorker';
 
 const routing = (
   <Router>
@@ -36,3 +36,4 @@ const routing = (
   </Router>
 )
 ReactDOM.render(routing, document.getElementById('root'))
+serviceWorker.register();
