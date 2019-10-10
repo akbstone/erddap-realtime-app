@@ -47,22 +47,55 @@ Requirements
 - NPM > 10
 - Chrome (https://github.com/facebook/create-react-app/issues/7337)
 
-Install it
+#### Install it
 
-### `git clone ....`
-### `npm install`
+```
+$ git clone
+$ npm install
+```
 
-Run it
+#### Run it
 
-### `npm start`
+```
+$ npm start
+```
+
+#### Build
+
+```
+$ npm run build
+```
 
 
-Build
-### `npm run build`
+#### Test
 
+```
+$ npm test
+```
 
-Test
+Development
+-----------
 
+erddap-realtime-app depends on several libraries still being actively developed. The package.json
+refers to their github location and will clone those down on install.
+
+- [erddap-parser-js](//github.com/akbstone/erddap-parser-js)
+- [erddap-timeseries-chart-js](//github.com/akbstone/erddap-timeseries-chart-js)
+
+If you're actively working on those dependent libraries and you want to have your changes reflected
+immediatly, you can use [`npm link`](//docs.npmjs.com/cli/link) to set up symlinks on your development machine.  You will have
+to remember to run `npm run build` in the individual projects when making changes in them for 
+erddap-realtime-app to reflect the changes.
+
+```
+~/dev/erddap-parser-js $ npm link   # may need sudo
+~/dev/erddap-parser-js $ cd ~/dev/erddap-realtime-app
+~/dev/erddap-realtime-app $ npm link erddap-parser-js
+# repeat for erddap-timeseries-chart-js
+```
+
+This will replace the node_modules' link to erddap-parser-js with a symlink to your development version
+and not make changes to your package.json/package-lock.json.
 
 Docker
 ------
