@@ -7,10 +7,14 @@ import SensorHighlight from './sensorHighlight';
 
 
 class Sensor extends React.Component {
+   
    constructor(props){
        super(props)
        this.state = {highlight:null};
+
+       this.onMouseMove = this.onMouseMove.bind(this);
    }
+  
   async componentDidMount(){
     
     try {
@@ -52,15 +56,16 @@ class Sensor extends React.Component {
                     .x(d=>d.time)
                     .y(d=>d.value)
                     .chartType('line')
-                    .on('mousemove',e=>{
-                        debugger;
-                        //this.setState('highlight',e)
-                    });
+                    .on('mousemove',this.onMouseMove);
             
             svg.call(chart);
         }catch(e){
             throw(e)
         }
+  }
+
+  onMouseMove(e) {
+    this.setState({highlight: e});
   }
 
   render() {
@@ -71,7 +76,6 @@ class Sensor extends React.Component {
         <SensorHighlight highlight={this.state.highlight} parameter={this.props.parameter} />
         <div className="chartWrap" ref="chartWrap" style={{marginRight:"200px"}}>
         </div>
-        
       </div>
   }
 }
