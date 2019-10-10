@@ -25,6 +25,22 @@ class FavoriteStorage {
         localStorage.removeItem(`${MEMORY_KEY_PREFIX}${key}`);
         return key;
     }
+
+        /**
+     * This is used to remove an item from storage
+     */
+    static getList() {
+        //localStorage.(`${MEMORY_KEY_PREFIX}${key}`)
+
+        
+        let r = new RegExp('^' + MEMORY_KEY_PREFIX),
+            list = Object.keys(localStorage)
+                    .filter(k=>k.match(r))
+                    .map(k=>k.replace(r,''));
+        return list;
+    }
+
+
 }
 
 export default FavoriteStorage;
