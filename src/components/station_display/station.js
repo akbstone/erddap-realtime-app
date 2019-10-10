@@ -25,7 +25,6 @@ function Station(props) {
 
     React.useEffect(() => {
         const fetchData = async () => {
-        
             let stationMetadata = await erddapParser.getDatasetMetadata({
                 server:'https://erddap.sensors.axds.co/erddap',
                 dataset_id: stationId

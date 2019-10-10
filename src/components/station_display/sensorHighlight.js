@@ -1,23 +1,26 @@
 import React from 'react'
 
 
-function SensorHighlight(props){
-    const [highlight, parameter] = React.useState(null);
-    React.useEffect(() => {
-
-    },[highlight])
-
-    React.useEffect(() => {
-
-    },[parameter])
-
-    let output = (<p>...</p>)
-    if(highlight){
-        output = (
-            <p>{highlight.value}</p>
+function SensorHighlight({ highlight }){
+    
+    if (highlight){
+        return (
+            <p>
+                <span>
+                    {highlight.time.toISOString()}
+                </span>
+                &nbsp;
+                :
+                &nbsp;
+                <span style={{backgroundColor: '#FFFF00'}}>
+                    <b>{highlight.value.toFixed(2)}</b>
+                </span>
+            </p>
         )
     }
-    return output;
+
+    return null;
+
 }
 
 export default SensorHighlight;
