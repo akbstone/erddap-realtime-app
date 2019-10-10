@@ -125,7 +125,7 @@ export default function PrimarySearchAppBar() {
             <MenuIcon />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
-            Real time ERDDAP App
+            {process.env.REACT_APP_LABEL}
           </Typography>
           <div className={classes.grow} />
           <div className={classes.sectionMobile}>

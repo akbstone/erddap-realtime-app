@@ -12,11 +12,11 @@ class Sensor extends React.Component {
             start = new Date(+now - 10*day),
             end = now,
             variable_names = {time:'time'}
-        
+
         variable_names[this.props.parameter.variable_name] = 'value';
 
         let data = await erddapParser.getTabledapData({
-            server:'https://erddap.sensors.axds.co/erddap',
+            server: process.env.REACT_APP_ERDDAP_URL || 'https://erddap.sensors.axds.co/erddap',
             dataset_id:this.props.parameter.dataset_id,
             variables:[
                 'time',
@@ -42,7 +42,7 @@ class Sensor extends React.Component {
                     .data(data)
                     .width(width)
                     .height(height)
-                    .x(d=>d.time)
+                    .x(d=>d[process.env.REACT_APP_TIME_VAR || 'time'])
                     .y(d=>d.value)
                     .chartType('line');
             
