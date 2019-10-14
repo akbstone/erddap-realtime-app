@@ -22,7 +22,7 @@ async function getStations(searchFor) {
             }
           })
           resolve(res);
-        },2000)
+        },500)
       })
   }
 
@@ -38,46 +38,38 @@ const useStyles = makeStyles(theme => ({
   },
 }))
 
-
-
-function Search(){
+export default function Search(){
 
   const classes = useStyles()
-  const [searchString,setSearchString] = useState('');
-  const [searchResults,setSearchResults] = useState([]);
+  const [searchResults, setSearchResults] = useState([]);
+  const [busy, setBusy] = useState(false);
 
-  let busy = false;
+  // let busy = false;
   let pending = false;
-  let loaderRef = React.createRef();
 
-  function setBusy(_busy){
-    busy = _busy;
-    if(loaderRef && loaderRef.current){
-      loaderRef.current.style.display = busy ? 'block' : 'none';
-    }
-  }
+  // let searchResults = [];
 
-  function setPending(_pending){
-    pending = _pending;
-  }
-  
   async function updateResults(searchFor){
     if(!busy){
-      setBusy(true)
+      setBusy(true);
       let results = await getStations(searchFor);
       results = results.map((r,k)=>{
         return Object.assign({key:k + 1},r)
       })
       setSearchResults(results);
-      setBusy(false)
+
+      setBusy(false);
+
       if(pending){
         let nextSearch = pending;
-        setPending(false)
-        updateResults(nextSearch)
+        pending = false;
+
+        // this doesn't take a boolean as a param
+        // updateResults(nextSearch)
       }
     }else{
       //console.log('waiting')
-      setPending(searchFor);
+      pending = searchFor;
     }
   }
 
@@ -85,27 +77,33 @@ function Search(){
     updateResults(e.target.value);
   }
 
-  
+  console.log('busy ' + busy)
+
   return (
-    <React.Fragment>
+    <>
       <form className={classes.container} noValidate autoComplete="off">
-      <TextField
-          id="filled-name"
-          fullWidth={true}
-          placeholder="Station search"
-          className={classes.textField}
-          onKeyUp={onKeyUp}
-          margin="normal"
-          variant="filled"
-        />
+        <TextField
+            id="filled-name"
+            fullWidth={true}
+            placeholder="Station search"
+            className={classes.textField}
+            onKeyUp={onKeyUp}
+            margin="normal"
+            variant="filled"
+          />
       </form>
-      <div style={{textAlign:"center",display:"none"}} ref={loaderRef}>
-        <CircularProgress />
-      </div>
+    
+      {busy &&
+        <div style={{textAlign:"center"}}>
+          <CircularProgress />
+        </div>
+      }
+
+      busy: {busy.toString()}
+
       <div style={{marginBottom:"60px"}}>
         <Results searchResults={searchResults}/>
       </div>
-    </React.Fragment>
+    </>
   )
 }
-export default Search
