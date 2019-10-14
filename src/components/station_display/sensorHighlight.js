@@ -5,17 +5,16 @@ function SensorHighlight({ highlight }){
     
     if (highlight){
         return (
-            <p>
-                <span>
+            <React.Fragment>
+                <h3>
+                    <b>{highlight.value.toFixed(2)}</b>
+                </h3>
+                <span style={{fontSize:"10px"}}>
                     {highlight.time.toISOString()}
                 </span>
-                &nbsp;
-                :
-                &nbsp;
-                <span style={{backgroundColor: '#FFFF00'}}>
-                    <b>{highlight.value.toFixed(2)}</b>
-                </span>
-            </p>
+                
+                
+            </React.Fragment>
         )
     }
 

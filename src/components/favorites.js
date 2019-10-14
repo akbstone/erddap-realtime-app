@@ -8,10 +8,9 @@ import {Link} from "react-router-dom";
     return StationStorage.getList().map((d,i)=>{
       return {
         index:i + 1,
-        id:d,
-        isFavorite:true
+        id:d
       }
-    }) || [];
+    });
   }
 
 class Favorites extends React.Component {
@@ -20,36 +19,29 @@ class Favorites extends React.Component {
     super(props)
     this.state = {list:getList()};
   }
-
-  updateState(){
-    this.setState({list:getList()})
-  }
-
-
-
   
   render() {
 
-    let _this = this;
+    function removeFavorite(station_id){
+      StationStorage.removeItem(station_id);
+      this.setState({list:getList()})
+      //this.setState({list:getList()});
+    }
+
+
     
     return <React.Fragment>
     <h1>Favorites</h1>
-    {this.state.list.map(station =>{
-      function setFavorite(){
-        StationStorage.removeItem(station.id);
-        _this.updateState()
-        //this.setState({list:getList()});
-      }
-
-      let station_url = '/station/' + station.id;
-      return <React.Fragment key={station.index}> 
-        <div className="card" style={{clear: "both"}}>
-          <FavoriteButton handleClick={setFavorite} favorite={station.isFavorite} />
-          <Link to={station_url}>{station.id}</Link>
-        </div>
-        </React.Fragment>
-      }
-    )}
+      {this.state.list.map(station =>{
+        let station_url = '/station/' + station.id;
+        return <React.Fragment key={station.index}> 
+          <div className="card" style={{clear: "both"}}>
+            <FavoriteButton handleClick={()=>removeFavorite(station.id)} favorite={true} />
+            <Link to={station_url}>{station.id}</Link>
+          </div>
+          </React.Fragment>
+        }
+      )}
     </React.Fragment>
   }
 }

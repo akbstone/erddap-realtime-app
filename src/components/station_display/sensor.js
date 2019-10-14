@@ -13,6 +13,7 @@ class Sensor extends React.Component {
        this.state = {highlight:null};
 
        this.onMouseMove = this.onMouseMove.bind(this);
+       this.onMouseOut = this.onMouseOut.bind(this)
    }
   
   async componentDidMount(){
@@ -56,7 +57,8 @@ class Sensor extends React.Component {
                     .x(d=>d[process.env.REACT_APP_TIME_VAR || 'time'])
                     .y(d=>d.value)
                     .chartType('line')
-                    .on('mousemove',this.onMouseMove);
+                    .on('mousemove',this.onMouseMove)
+                    .on('mouseout',this.onMouseOut)
             
             svg.call(chart);
         }catch(e){
@@ -67,14 +69,17 @@ class Sensor extends React.Component {
   onMouseMove(e) {
     this.setState({highlight: e});
   }
+  onMouseOut() {
+      //this.setState({highlight:null})
+  }
 
   render() {
 
         
-    return <div>
+    return <div style={{clear:"both"}}>
         <h4>{this.props.parameter.long_name} ({this.props.parameter.units})</h4>
-        <SensorHighlight highlight={this.state.highlight} parameter={this.props.parameter} />
-        <div className="chartWrap" ref="chartWrap" style={{marginRight:"200px"}}>
+        <div style={{float:"right",width:"100px"}}><SensorHighlight highlight={this.state.highlight} parameter={this.props.parameter} /></div>
+        <div className="chartWrap" ref="chartWrap" style={{marginRight:"100px"}}>
         </div>
       </div>
   }
