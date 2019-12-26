@@ -1,0 +1,11 @@
+{
+  "version": "v1",
+  "packages": {
+    "erddap-parser": {
+      "signature": "406cff5ef3e030b8c1dcc6e9dccf85a8"
+    },
+    "erddap-timeseries-chart": {
+      "signature": "59624af77d0c55b658bd308fe3b1a02b"
+    }
+  }
+}
