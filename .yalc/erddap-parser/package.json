@@ -1,0 +1,29 @@
+{
+  "name": "erddap-parser",
+  "version": "0.1.0-bcc3e2c9",
+  "description": "{DESCRIPTION}",
+  "keywords": [
+    "d3",
+    "d3-module"
+  ],
+  "license": "BSD-3-Clause",
+  "main": "build/erddap-parser.js",
+  "homepage": "https://github.com/akbstone/erddap-parser-js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akbstone/erddap-parser.git"
+  },
+  "scripts": {
+    "build": "rm -rf build && mkdir build && npm run build-full && npm run build-slim",
+    "build-full": "rollup --c",
+    "build-slim": "rollup --c rollup.config.slim.js",
+    "pretest": "npm run build",
+    "test": "tap test",
+    "cover": "tap test/*.js --cov --coverage-report=lcov",
+    "prepare": "npm run test"
+  },
+  "dependencies": {
+    "d3-dsv": "^1.2.0",
+    "d3-fetch": "^1.1.2"
+  }
+}

@@ -1,0 +1,310 @@
+<html>
+
+<head>
+    <!-- <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script> -->
+    <script src="../build/erddap-parser.js"></script>
+    <style type="text/css">
+      *{
+        font-family:arial;
+        font-size:14px;
+      }
+
+      .results table *{
+        font-size:10px;
+      }
+      input {
+        width: 300px;
+      }
+      label {
+        display: inline-block;
+        width: 150px;
+        text-align: right;
+        font-weight: bold;
+      }
+
+      .results{
+        width:30%;
+        float:left;
+      }
+
+      .results table{
+        width:100%;
+      }
+
+      .results table,
+      .results h3,
+      .results h4,
+      .results h5,
+      .results p{
+        padding:4px 10px;
+      }
+
+      .results h5{
+        font-size:10px;
+        margin-top:0px;
+      }
+
+      .results table tr td{
+        padding:4px;
+      }
+      .results table tr:nth-child(odd) td{
+          background:#ededed;
+      }
+
+    </style>
+</head>
+
+<body>
+    <p>
+      <strong>NOTE:</strong> Check javascript console window for example results. 
+    </p>
+    <form method="get">
+      <p>
+        <label for="server">ERDDAP Server: </label> <input type="text" name="server" id="server" value="" placeholder="https://erddap.sensors.axds.co/erddap" />
+      </p>
+      <p>
+        <label for="dataset">Dataset ID: </label> <input type="text" name="dataset" id="dataset" value="" placeholder="gov_noaa_nws_panc" />
+        <label for="protocol">Protocol: </label> 
+        <select name="protocol" id="protocol">
+          <option>tabledap</option>
+          <option>griddap</option>
+        </select>
+      </p>
+      <p>
+        <label for="search">Search String: </label> <input type="text" name="search" id="search" value="" />
+      </p>
+      <p>
+        <input type="submit" value="Go!" />
+      </p>
+
+      <div id="search-results" class="results"></div>
+      <div id="metadata-results" class="results"></div>
+      <div id="data-results" class="results"></div>
+    </form>
+
+    <script type="text/javascript">
+        const urlParams = new URLSearchParams(window.location.search);
+        const search_query = urlParams.get('search');
+        const erddap_server_override = urlParams.get('server');
+        const dataset_override = urlParams.get('dataset');
+        const protocol_override = urlParams.get('protocol');
+        
+        // ERDDAP server with Griddap datasets and CORS enabled: http://www.neracoos.org/erddap
+        // Example griddap dataset id: WW3_EastCoast_latest
+
+        let erddap_server = ((!erddap_server_override) ? 'https://erddap.sensors.axds.co/erddap' : erddap_server_override),
+            dataset = ((!dataset_override) ? 'gov_noaa_nws_panc' : dataset_override),
+            protocol = ((!protocol_override) ? 'tabledap' : protocol_override),
+            metadata,
+            data, 
+            search_results;
+
+        console.log("Using ERDDAP Server: " + erddap_server);
+        console.log("Using dataset: " + dataset);
+        console.log("Using protocol: " + protocol);
+        console.log("Search for: " + search_query);
+
+        document.getElementsByName("server")[0].value = erddap_server;
+        document.getElementsByName("dataset")[0].value = dataset;
+        document.getElementsByName("search")[0].value = search_query;
+        document.getElementsByName("protocol")[0].value = protocol;
+
+        let getMetadata = async (dataset)=>{
+          try {
+                  console.log("Get dataset metadata example...")
+
+                  let metadata = await d3.erddapParser.getDatasetMetadata({
+                        server: erddap_server,
+                        dataset_id: dataset
+                    }),
+                    resDom = document.getElementById('metadata-results');
+
+                    resDom.innerHTML = `
+                      <h3>Metadata: ${dataset}<br />${metadata.title}</h3>
+                      <h4>Variables</h4>
+                      <table class="variables">
+                      ${metadata.variables.map(r=>{
+                        return `<tr><td>${r['Row Type']}</td><td><a href="${d3.erddapParser.createErddapUrl({
+                          server:erddap_server,
+                          request:'tabledap',
+                          dataset_id:dataset,
+                          response:'graph',
+                          variables:[metadata.dimensions_map.time['Variable Name'],r['Variable Name']]
+                        })}" target="_blank">${r.long_name}</a> (${r.units}) <button style="float:right">Load</button></td></tr>`
+                      }).join("\n")}
+                      </table>
+                      <h4>Dimensions</h4>
+                      <table>
+                      ${metadata.dimensions.map(r=>{
+                        return `<tr><td>${r['Row Type']}</td><td>${r.long_name} (${r.units})</td></tr>`
+                      }).join("\n")}
+                      </table>
+                      <h4>Attributes</h4>
+                      <table>
+                      ${metadata.attributes.map(r=>{
+                        return `<tr><td>${r['Row Type']}</td><td>${r.Value}</td></tr>`
+                      }).join("\n")}
+                      </table>
+                    `
+
+                  let els = resDom.getElementsByClassName('variables')[0].getElementsByTagName('button');
+                  for(let i =0;i < els.length;i ++){
+                    els[i].addEventListener('click',e=>{
+                        e.stopPropagation();
+                        e.preventDefault();
+                        getTabledapData(dataset,metadata.variables[i],metadata)
+                        return false;
+                    })
+                  }
+                console.log(metadata);
+                return metadata;
+            } catch (e) {
+                throw (e)
+                // Deal with the fact the chain failed
+            }
+        },
+        getTabledapData = async (dataset,variableRow,metadata)=>{
+          try {
+              console.log("Get tabledap data example...")
+
+              let now = new Date(),
+                  day = 24 * 60 * 60 * 1000,
+                  dataset_end = new Date(metadata.attributes_map.time_coverage_end.Value),
+                  start = new Date(+dataset_end - 10 * day),
+                  end = dataset_end,
+                  variables = [variableRow['Variable Name'], 'time'],
+                  variable_names = {};
+                variable_names[variables[0]] = 'value';
+
+                let resDom = document.getElementById('data-results')
+
+                try{
+                  let data = await d3.erddapParser.getTabledapData({
+                        server: erddap_server,
+                        dataset_id: dataset,
+                        constraints: {
+                            'time>=': start,
+                            'time<=': end
+                        },
+                        variables: variables,
+                        variable_names:variable_names
+                    });
+                
+                  resDom.innerHTML = `
+                  <h3>Data: ${dataset}</h3>
+                  <h5>${variables.join(',')}<br />${start.toISOString()} to ${end.toISOString()}</h5>
+                  <table>
+                    <thead><th>time</th><th>value</th></tr></thead>
+                    <tbody>
+                  ${data.map(r=>{
+                    return `<tr><td>${r.time.toISOString()}</td><td>${r.value}</td></tr>`
+                  }).join("\n")}
+                    </tbody>
+                  </table>
+                `
+              }catch(e){
+                resDom.innerHTML = `<h3>Data: ${dataset}</h3><p>Error fetching</p>`;
+              }
+
+              console.log(data)
+
+
+              
+          } catch (e) {
+              throw (e)
+          }
+        },
+        loadNewDataSet = async (dataset)=>{
+          let metadata = await getMetadata(dataset)
+          getTabledapData(dataset,metadata.variables[0],metadata)
+        },
+        getTabledapSearchResults = async (search_query)=>{
+          try{
+                console.log("search tabledap datasets example, searching for: " + search_query)
+                let ob = {
+                  constraints: {
+                    searchFor: search_query,
+                    itemsPerPage: 40, // default value 20
+                    page: 1           // default value of 1
+                  },
+                  server: erddap_server
+                }
+
+                switch(protocol){
+                  case "tabledap":
+                    let results = await d3.erddapParser.searchTabledap(ob),
+                        resDom = document.getElementById('search-results');
+                      
+                    if(!results){
+                      resDom.innerHTML = 'Error';
+                    }else{
+                    
+                    
+                    resDom.innerHTML = `
+                      <h3>Search</h3>
+                      <table>
+                        ${results.map(r=>{
+                          return `<tr><td><a href="${r.tabledap}" target="_blank">${r.Title}</a> <button style="float:right">Load</button></td></tr>`
+                        }).join("\n")}
+                      </table>`
+
+                    
+                      let els = resDom.getElementsByTagName('button');
+                      for(let i =0;i < els.length;i ++){
+                          els[i].addEventListener('click',e=>{
+                              e.stopPropagation();
+                              e.preventDefault();
+                              loadNewDataSet(results[i]['Dataset ID'])
+                              return false;
+                          })
+                      }
+                    }
+                    
+                    break;
+
+                  case "griddap":
+                    console.log("Griddap search not implemented yet");
+                    //search_results = await d3.erddapParser.searchGriddap(ob);
+                    break;
+                }
+
+                console.log(search_results);
+              }
+              catch(e){
+                throw (e)
+              }
+        }
+        
+        
+        (async () => {
+            // Example get Metadata
+           let metadata = await getMetadata(dataset)
+
+            switch(protocol){
+              case "tabledap":
+                // Example get data (tableDap) usage
+                getTabledapData(dataset,metadata.variables[0],metadata)
+                break;
+
+              case "griddap":
+                // Example get data (tableDap) usage
+                try {
+                  console.log("Get griddap data example...")
+
+
+              } catch (e) {
+                  throw (e)
+              }
+
+              break;
+            }
+
+            if(search_query){
+              // Example search (tableDap) usage
+              getTabledapSearchResults(search_query);
+            }
+        })();
+    </script>
+</body>
+</html>
