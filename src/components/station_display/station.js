@@ -30,20 +30,20 @@ function Station(props) {
                 dataset_id: stationId
             });
 
-            if(Array.isArray(stationMetadata)){
-                stationMetadata = {
-                    parameters:stationMetadata.slice().map(p => {
-                        return Object.assign(
-                            p,
-                            {
-                                dataset_id: stationId,
-                                variable_name: p['Variable Name']
-                            }
-                        )
-                    }),
-                    label:stationId
-                }
-            }
+
+
+
+            stationMetadata.parameters = stationMetadata.variables.slice().map(p => {
+                    return Object.assign(
+                        p,
+                        {
+                            dataset_id: stationId,
+                            variable_name: p['Variable Name']
+                        }
+                    )
+                })
+                
+            
 
             setStation(stationMetadata);
         };
@@ -85,7 +85,7 @@ function Station(props) {
         output = (
             <div className="station-wrap" style={{marginBottom: "64px"}}>
                 <FavoriteButton favorite={isFavorite} handleClick={onFavoriteClick} />
-                <h1>Station name ({stationId})</h1>
+                <h1>{station ? station.title : stationId}</h1>
                     {parameters.map(parameter => <Sensor key={parameter.index} parameter={parameter} height={100} />)}
             </div>
         )
