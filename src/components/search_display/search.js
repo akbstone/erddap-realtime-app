@@ -159,6 +159,9 @@ export default function Search(){
 
 
       <List>
+        {!((searchResults || []).length) && 
+          <p><em>Enter a search term</em></p>
+        }
         {(searchResults || []).map((item,index) => item ? (
 
 
