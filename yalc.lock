@@ -2,12 +2,14 @@
   "version": "v1",
   "packages": {
     "erddap-parser": {
-      "signature": "bcc3e2c9206107209d8dc2c3e1edc654",
+      "signature": "aefc26bc7f8d55c70a87acaaa9c66dbc",
       "file": true,
       "replaced": "akbstone/erddap-parser-js"
     },
     "erddap-timeseries-chart": {
-      "signature": "59624af77d0c55b658bd308fe3b1a02b"
+      "signature": "bb4fc1ca6cb688b904ee4bd67324c3e7",
+      "file": true,
+      "replaced": "github:akbstone/erddap-timeseries-chart-js"
     }
   }
 }

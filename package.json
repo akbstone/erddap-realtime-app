@@ -9,7 +9,7 @@
     "classnames": "^2.2.6",
     "d3-selection": "^1.4.1",
     "erddap-parser": "file:.yalc/erddap-parser",
-    "erddap-timeseries-chart": "github:akbstone/erddap-timeseries-chart-js",
+    "erddap-timeseries-chart": "file:.yalc/erddap-timeseries-chart",
     "lodash.keyby": "^4.6.0",
     "lodash.throttle": "^4.1.1",
     "react": "^16.13.1",
@@ -44,8 +44,6 @@
     "husky": "^4.2.5"
   },
   "husky": {
-    "hooks": {
-     
-    }
+    "hooks": {}
   }
 }
