@@ -139,7 +139,8 @@
 	      ...{
 	        constraints: { ...{
 	            'itemsPerPage': 20,
-	            'page': 1
+	            'page': 1,
+	            'protocol': 'tabledap'
 	          },
 	          ...ob.constraints
 	        },
@@ -219,7 +220,7 @@
 	    let spatial = {};
 
 	    if (attributes_map.geospatial_lon_min && attributes_map.geospatial_lon_max && attributes_map.geospatial_lat_min && attributes_map.geospatial_lat_max) {
-	      if (attributes_map.geospatial_lon_min === attributes_map.geospatial_lon_max && attributes_map.geospatial_lat_min === attributes_map.geospatial_lat_max) {
+	      if (attributes_map.geospatial_lon_min['Value'] === attributes_map.geospatial_lon_max['Value'] && attributes_map.geospatial_lat_min['Value'] === attributes_map.geospatial_lat_max['Value']) {
 	        spatial.point = [attributes_map.geospatial_lon_min, attributes_map.geospatial_lat_min];
 	      } else {
 	        spatial.bounds = [[attributes_map.geospatial_lon_min['Value'], attributes_map.geospatial_lat_min['Value']], [attributes_map.geospatial_lon_max['Value'], attributes_map.geospatial_lat_max['Value']]];

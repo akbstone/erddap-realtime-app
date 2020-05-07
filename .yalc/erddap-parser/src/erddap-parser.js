@@ -39,8 +39,7 @@ export default {
 		 * @param {array} ob.variables - the variables requested
 		 * @param {string} ob.query_format - string(default)|object
 		 */
-		createErddapQueryString: function(ob){
-			
+		createErddapQueryString: function(ob){			
 			let constraints = ob.constraints || {},
 				variables = ob.variables || [],
 				constraint_filters = [],
@@ -168,7 +167,7 @@ export default {
 		getSearchTableDapOb: function(ob){
 			return {...ob,...{
 				constraints:{
-					...{'itemsPerPage':20, 'page': 1},
+					...{'itemsPerPage':20, 'page': 1, 'protocol': 'tabledap'},
 					...ob.constraints
 				},
 				request:'search',
@@ -269,7 +268,7 @@ export default {
 			let spatial = {};
 			
 			if(attributes_map.geospatial_lon_min && attributes_map.geospatial_lon_max && attributes_map.geospatial_lat_min && attributes_map.geospatial_lat_max){
-				if(attributes_map.geospatial_lon_min === attributes_map.geospatial_lon_max && attributes_map.geospatial_lat_min === attributes_map.geospatial_lat_max){
+				if(attributes_map.geospatial_lon_min['Value'] === attributes_map.geospatial_lon_max['Value'] && attributes_map.geospatial_lat_min['Value'] === attributes_map.geospatial_lat_max['Value']){
 					spatial.point = [attributes_map.geospatial_lon_min,attributes_map.geospatial_lat_min];
 				}else{
 					spatial.bounds = [
